@@ -8,6 +8,14 @@ RUN go mod download
 
 COPY . .
 
+RUN go build -a -installsuffix cgo -o main .
+
+FROM ubuntu:20.04
+
+WORKDIR /root/
+
+COPY --from=builder /go/src/app/main .
+
 EXPOSE 8090
 
-CMD ["make", "run"]
+CMD ["./main"]
