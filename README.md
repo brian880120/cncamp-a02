@@ -2,7 +2,7 @@
 
 docker hub repository:
 
-brian880120/cncampa02-http-server
+https://hub.docker.com/repository/docker/brian880120/cncampa02-http-server
 
 
 运行:
